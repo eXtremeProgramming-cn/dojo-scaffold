@@ -28,10 +28,6 @@ public class Item {
         return false;
     }
 
-    boolean isBetterQualityWhenTimeGoesBy() {
-        return isAgedBrie() || isBackstagePass();
-    }
-
     public void passOneDay() {
         updateSellInDays();
         updateQuality();
@@ -42,7 +38,7 @@ public class Item {
     }
 
     private void updateQuality() {
-        if (!isBetterQualityWhenTimeGoesBy()) {
+        if (!isAgedBrie() && !isBackstagePass()) {
             if (quality > 0) {
                 if (!isSulfuras()) {
                     quality = quality - 1;
