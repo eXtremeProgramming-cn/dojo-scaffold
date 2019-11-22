@@ -3,7 +3,6 @@ package com.gildedrose;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.nio.file.Paths;
 
 import static java.nio.file.Files.readAllBytes;
 import static java.nio.file.Paths.get;
