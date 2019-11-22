@@ -4,7 +4,7 @@
 
 准备步骤：
 
-* `git clone https://github.com/gigix/dojo-scaffold.git`
+* `git clone https://github.com/eXtremeProgramming-cn/dojo-scaffold.git`
 * `mv dojo-scaffold my_kata && cd my_kata`
 * `./gradlew clean build`
   * 如果你使用Windows，这一步应该是 `gradlew.bat clean build`
