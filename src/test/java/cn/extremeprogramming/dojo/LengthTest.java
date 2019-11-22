@@ -19,6 +19,9 @@ public class LengthTest {
 
         Length foot = new Length(1, "Foot");
         assertThat(foot.toString(), is("1 [Foot]"));
+
+        Length yard = new Length(1, "Yard");
+        assertThat(yard.toString(), is("1 [Yard]"));
     }
 
     @Test
