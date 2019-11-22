@@ -29,5 +29,6 @@ public class LengthTest {
     @Test
     public void should_1_yard_equal_to_3_feet() {
         assertThat(new Length(1, "Yard"), is(new Length(3, "Foot")));
+        assertThat(new Length(1, "Yard"), is(new Length(36, "Inch")));
     }
 }
