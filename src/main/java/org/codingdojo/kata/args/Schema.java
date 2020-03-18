@@ -3,7 +3,7 @@ package org.codingdojo.kata.args;
 import java.util.List;
 import java.util.Optional;
 
-import static com.google.common.collect.Lists.newArrayList;
+import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toList;
 
 public class Schema {
@@ -11,7 +11,7 @@ public class Schema {
     private String rawText;
 
     public Schema(String text) {
-        argSpecs = newArrayList(text.split(" ")).stream().map(ArgSpec::new).collect(toList());
+        argSpecs = stream(text.split(" ")).map(ArgSpec::new).collect(toList());
         rawText = text;
         validate();
     }

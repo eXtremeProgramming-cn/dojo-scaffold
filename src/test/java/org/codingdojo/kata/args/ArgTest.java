@@ -3,7 +3,7 @@ package org.codingdojo.kata.args;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.google.common.collect.Lists.newArrayList;
+import static java.util.Arrays.asList;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -31,6 +31,6 @@ public class ArgTest {
     public void should_support_string_array_type() {
         schema = new Schema("s:[string]");
         Arg arg = new Arg(schema, "-s abc,123,xyz");
-        assertThat(arg.value(), is(newArrayList("abc", "123", "xyz")));
+        assertThat(arg.value(), is(asList("abc", "123", "xyz")));
     }
 }

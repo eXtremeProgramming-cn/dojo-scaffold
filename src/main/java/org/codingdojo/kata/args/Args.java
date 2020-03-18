@@ -3,14 +3,14 @@ package org.codingdojo.kata.args;
 import java.util.List;
 import java.util.Optional;
 
-import static com.google.common.collect.Lists.newArrayList;
+import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toList;
 
 public class Args {
     private final List<Arg> args;
 
     public Args(Schema schema, String... texts) {
-        this.args = newArrayList(texts).stream().map(text -> new Arg(schema, text)).collect(toList());
+        this.args = stream(texts).map(text -> new Arg(schema, text)).collect(toList());
     }
 
     public int size() {

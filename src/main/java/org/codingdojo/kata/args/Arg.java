@@ -1,8 +1,8 @@
 package org.codingdojo.kata.args;
 
-import static com.google.common.collect.Lists.newArrayList;
 import static java.lang.Boolean.parseBoolean;
 import static java.lang.Integer.parseInt;
+import static java.util.Arrays.asList;
 
 public class Arg {
     private final String label;
@@ -25,7 +25,7 @@ public class Arg {
             case "integer":
                 return parseInt(rawValue);
             case "[string]":
-                return newArrayList(rawValue.split(","));
+                return asList(rawValue.split(","));
             default:
                 return rawValue;
         }
